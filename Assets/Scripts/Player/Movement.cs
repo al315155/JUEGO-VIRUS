@@ -5,14 +5,17 @@ using System;
 
 public class Movement : MonoBehaviour {
 
-	float x, z;
-	public int lastX = 0, lastZ = 0;
-	public float acceleration = 0f;
-	public float MAX_ACCELERATION;
-	public float velocity;
+	float 			x, z;
+	public int 		lastX = 0, lastZ = 0;
+	public float 	acceleration = 0f;
+	public float	MAX_ACCELERATION;
+	public float 	velocity;
 
-	void Start () {
-		
+	public GameObject levelManager;
+
+	void Start () 
+	{
+		levelManager = GameObject.Find ("Level Manager").gameObject;
 	}
 	
 	void Update () 
@@ -24,15 +27,15 @@ public class Movement : MonoBehaviour {
 	void FixedUpdate()
 	{
 		//Movimiento básico
-		/*x = Input.GetAxis ("Horizontal");
+		x = Input.GetAxis ("Horizontal");
 		z = Input.GetAxis ("Vertical");
 
-		Vector3 movement = new Vector3 (x + velocity * Time.deltaTime, 0f, z + velocity * Time.deltaTime);
+		Vector3 movement = new Vector3 (x * velocity * Time.deltaTime, 0f, z * velocity * Time.deltaTime);
 
-		transform.position += movement;*/
+		transform.position += movement;
 
 		//Movimiento con efecto de frenazo
-		x = Input.GetAxis("Horizontal");
+		/*x = Input.GetAxis("Horizontal");
 		z = Input.GetAxis ("Vertical");
 
 		Vector3 movement;
@@ -85,9 +88,15 @@ public class Movement : MonoBehaviour {
 		}
 
 		//Finalmente, se actualiza la posición del jugador
-		transform.position += movement;
+		transform.position += movement;*/
 	}
 
-
+	void OnTriggerEnter(Collider col)
+	{
+		if (col.tag == "Exit") 
+		{
+			levelManager.GetComponent<LevelManager> ().changeLevel ();
+		}
+	}
 
 }
