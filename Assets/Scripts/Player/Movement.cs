@@ -97,6 +97,16 @@ public class Movement : MonoBehaviour {
 		{
 			levelManager.GetComponent<LevelManager> ().changeLevel ();
 		}
+
+		else if(col.tag == "Enemy")
+		{
+			
+		}
+	}
+
+	void onTriggerExit(Collider col)
+	{
+		
 	}
 
 }
