@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
 		FinishedPosition = lookForExit ();
 
 		Player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
-		Player.position = StartPosition.position;
+        Player.position = StartPosition.position;
 	}
 		
 	void Awake()

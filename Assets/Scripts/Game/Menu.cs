@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour {
 	// Use this for initialization
 	public void BotonPlay()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Nivel1");
     }
 
     public void BotonSalir()
