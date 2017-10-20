@@ -4,13 +4,15 @@ using UnityEngine;
 
 public abstract class SteerAgent : MonoBehaviour {
 
-	// 	Estudios IA Craig Reynolds
-	//	Ricardo David AI programmation
-
 	public 	float	Mass			= 1f;
 	public	float	MaxStrengh		= 0.1f;
-	public	float	MaxVelocity		= 1f;
+	public	float	MaxVelocity		= 0.2f;
 	public	float	TickFixedTime 	= 0.01f;
+
+	void Start(){
+		StartCoroutine(UpdateObjective());
+		StartCoroutine(UpdatePosition());
+	}
 
 	//[System.NonSerializedAttribute]
 	public 	Vector3 Velocity;
