@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Game\Menu.cs" />
      <Compile Include="Assets\Scripts\Game\PauseGame.cs" />
      <Compile Include="Assets\Scripts\Player\Movement.cs" />
+     <Compile Include="Assets\Scripts\SteerBehaviours\Scape.cs" />
      <Compile Include="Assets\Scripts\SteerBehaviours\Seek.cs" />
      <Compile Include="Assets\Scripts\SteerBehaviours\SteerAgent.cs" />
  <Reference Include="UnityEngine.UI">

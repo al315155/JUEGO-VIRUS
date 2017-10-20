@@ -1497,7 +1497,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 47
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -4871,7 +4871,6 @@ GameObject:
   - component: {fileID: 1313965817}
   - component: {fileID: 1313965816}
   - component: {fileID: 1313965815}
-  - component: {fileID: 1313965822}
   m_Layer: 0
   m_Name: macrofago
   m_TagString: Enemy
@@ -4989,25 +4988,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1313965822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1313965814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e5d465266c9f8e4b8529f8675be7618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mass: 1
-  MaxStrengh: 0.1
-  MaxVelocity: 1
-  TickFixedTime: 0.01
-  Velocity: {x: 0, y: 0, z: 0}
-  SteerStrengh: {x: 0, y: 0, z: 0}
-  target: {fileID: 1843104012}
-  desiredVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &1489310153
 GameObject:
   m_ObjectHideFlags: 0
