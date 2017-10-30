@@ -151,6 +151,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: fbee7b759b9f805468375d54daaaf0b5, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fbee7b759b9f805468375d54daaaf0b5, type: 3}
   m_IsPrefabParent: 0
@@ -5941,14 +5945,9 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114833087632635242, guid: 7b918b2367b747948ba9dca370e88bc0,
-        type: 2}
-      propertyPath: wayPointList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4337608424964600, guid: 7b918b2367b747948ba9dca370e88bc0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.7
+      value: 22.96
       objectReference: {fileID: 0}
     - target: {fileID: 4337608424964600, guid: 7b918b2367b747948ba9dca370e88bc0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5956,7 +5955,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4337608424964600, guid: 7b918b2367b747948ba9dca370e88bc0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 4337608424964600, guid: 7b918b2367b747948ba9dca370e88bc0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5988,15 +5987,15 @@ Prefab:
       propertyPath: wayPointList.Array.data[1]
       value: 
       objectReference: {fileID: 1999206492}
-    - target: {fileID: 1353959955000908, guid: 7b918b2367b747948ba9dca370e88bc0, type: 2}
-      propertyPath: m_Name
-      value: macrofago (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 114833087632635242, guid: 7b918b2367b747948ba9dca370e88bc0,
         type: 2}
       propertyPath: wayPointList.Array.data[2]
       value: 
       objectReference: {fileID: 2007640763}
+    - target: {fileID: 1353959955000908, guid: 7b918b2367b747948ba9dca370e88bc0, type: 2}
+      propertyPath: m_Name
+      value: macrofago (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b918b2367b747948ba9dca370e88bc0, type: 2}
   m_IsPrefabParent: 0

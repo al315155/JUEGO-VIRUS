@@ -7,11 +7,13 @@ public class StateController : MonoBehaviour {
 
 	public State currentState;
 	public Transform eyes;
-	//public State remainState;
+	public EnemyStats enemeyStats;
+	public State remainState;
 	public List<Transform> wayPointList;
 
 	[HideInInspector] public NavMeshAgent navMeshAgent;
 	[HideInInspector] public int nextWayPoint;
+	[HideInInspector] public Transform chaseTarget;
 
 	void Awake()
 	{
@@ -28,8 +30,15 @@ public class StateController : MonoBehaviour {
 	{
 		if (currentState != null && eyes != null) {
 			Gizmos.color = currentState.sceneGizmoColor;
-			//cambiar radio;
-			Gizmos.DrawWireSphere(eyes.position,1f);
+
+			Gizmos.DrawWireSphere(eyes.position,enemeyStats.lookSphereCastRadius);
+		}
+	}
+
+	public void TrasitionToState (State nextState)
+	{
+		if (nextState != remainState) {
+			currentState = nextState;
 		}
 	}
 

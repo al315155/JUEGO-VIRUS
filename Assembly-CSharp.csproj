@@ -61,9 +61,16 @@
      <Compile Include="Assets\Scripts\Game\PauseGame.cs" />
      <Compile Include="Assets\Scripts\Player\Movement.cs" />
      <Compile Include="Assets\Scripts\StateMachine\Action.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\ActiveStateDecision.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\BackToPatrolDecision.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\ChaseAction.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\Decision.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\EnemyStats.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\LookDecision.cs" />
      <Compile Include="Assets\Scripts\StateMachine\PatrolAction.cs" />
      <Compile Include="Assets\Scripts\StateMachine\State.cs" />
      <Compile Include="Assets\Scripts\StateMachine\StateController.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\Transition.cs" />
      <Compile Include="Assets\Scripts\SteerBehaviours\Scape.cs" />
      <Compile Include="Assets\Scripts\SteerBehaviours\Seek.cs" />
      <Compile Include="Assets\Scripts\SteerBehaviours\SteerAgent.cs" />
