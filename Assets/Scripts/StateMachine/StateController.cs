@@ -10,6 +10,9 @@ public class StateController : MonoBehaviour {
 	public EnemyStats enemeyStats;
 	public State remainState;
 	public List<Transform> wayPointList;
+    public bool isPlayerOnSight;
+    public Transform player;
+
 
 	[HideInInspector] public NavMeshAgent navMeshAgent;
 	[HideInInspector] public int nextWayPoint;
@@ -17,8 +20,10 @@ public class StateController : MonoBehaviour {
 
 	void Awake()
 	{
+        isPlayerOnSight = false;
 		navMeshAgent = GetComponent<NavMeshAgent> ();
 		navMeshAgent.enabled = true;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
 	void Update()
