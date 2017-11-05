@@ -7,17 +7,23 @@ public class ConeDecision : Decision {
 
     public override bool Decide(StateController controller)
     {
-        bool targetVisible = Look(controller);
+        bool targetVisible = Check(controller);
         return targetVisible;
     }
 
-    private bool Look(StateController controller)
+    private bool Check(StateController controller)
     {
         if (controller.isPlayerOnSight)
         {
             controller.chaseTarget = controller.player;
         }
-        return controller.isPlayerOnSight;
+        if (controller.pState == StateController.pursuitState.SCAPED)
+        {
+            Debug.Log("Estoy en false");
+            controller.pState = StateController.pursuitState.PATROL;
+            return false;
+        }
+        return controller.isPlayerOnSight || controller.isPlayerHeard;
     }
 
 

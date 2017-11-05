@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
+using System.Collections;
 
 public class csAreaVision : MonoBehaviour {
 
-	public int angulo = 45;
-	public int rango  = 5;
+	public int angulo = 45;                 // Ángulo de visión
+	public int rango  = 5;                  // Rango de visión
+    private float timeForOutOfSight = 10f;  // Cuánto tiempo tiene que pasar para que nos escapemos.
+    private float scapeCounter;             // Contador que nos dice si nos hemos conseguido escapar.
+    private bool isScaping;                 // Nos dice si el jugador está escapando del enemigo.
 
     [SerializeField]
     private ConeDecision m_ConeDecision;
@@ -78,20 +83,20 @@ public class csAreaVision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        isScaping = false;
 		meshFilter = this.gameObject.GetComponent<MeshFilter>();
 		meshFilter.mesh = Cono();
 		initialPosition = meshFilter.mesh.vertices;
 		initialUV = meshFilter.mesh.uv;
         m_stateController = transform.parent.gameObject.GetComponent<StateController>();
         m_changeConeMaterial = GetComponent<ChangeConeMaterial>();
-	
+        scapeCounter = 0f;
 	}
 
 	Mesh areaMesh(Mesh mesh){
 
 		Mesh _mesh = new Mesh();
-
+        int playerFound = 0;
 		Vector3[] vertices = new Vector3[mesh.vertices.Length];
 		Vector2[] uv       = new Vector2[mesh.uv.Length];
 
@@ -108,23 +113,38 @@ public class csAreaVision : MonoBehaviour {
 			if(Physics.Linecast(center,worldPoint, out hit)){
                 if(hit.collider.gameObject.name == "Player")
                 {
-                    m_stateController.isPlayerOnSight = true;
+                    //Si una línea choca con el jugador, entonces es que estamos viéndolo.
+                    playerFound++;
+                    //m_stateController.isPlayerOnSight = true;
                     m_changeConeMaterial.ChangeMaterial(stateMaterial.PURSUIT);
-
                 }
 				vertices[i] = transform.worldToLocalMatrix.MultiplyPoint3x4(hit.point);
 				uv[i] = new Vector2((rango+vertices[i].x)/(rango*2),(rango+vertices[i].z)/(rango*2));
 
 			} else {
-
-				vertices[i] = initialPosition[i];
+                //m_stateController.isPlayerOnSight = false;
+                vertices[i] = initialPosition[i];
 				uv[i]       = initialUV[i];
-
 			}
-
 		}
 
-		_mesh.vertices  = vertices;
+        if (playerFound > 0)
+        {
+            m_stateController.isPlayerOnSight = true;
+            m_stateController.pState = StateController.pursuitState.FOLLOWING;
+        }
+        else
+        {
+            // Me han visto y ahora me estoy escapando.
+            if (m_stateController.isPlayerOnSight)
+            {
+                InitializeCounter();    // Inicializo el contador.
+                m_stateController.isPlayerOnSight = false;
+            }
+
+        }
+
+        _mesh.vertices  = vertices;
 		_mesh.uv        = uv;
 		_mesh.normals   = mesh.normals;
 		_mesh.triangles = mesh.triangles;
@@ -132,9 +152,16 @@ public class csAreaVision : MonoBehaviour {
 		return _mesh;
 
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    // Cuenta el tiempo hasta que me escape.
+    private void InitializeCounter()
+    {
+        isScaping = true;
+        scapeCounter = 0f;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate () {
 
 		if(oldPosition!=transform.position || oldRotation!=transform.rotation || oldScale != transform.localScale){
 
@@ -145,6 +172,18 @@ public class csAreaVision : MonoBehaviour {
 			meshFilter.mesh = areaMesh(meshFilter.mesh);
 
 		}
+
+        if (isScaping)
+        {
+            scapeCounter += Time.deltaTime;
+            if(scapeCounter >= timeForOutOfSight)
+            {
+                m_changeConeMaterial.ChangeMaterial(stateMaterial.PATROL);
+                m_stateController.pState = StateController.pursuitState.SCAPED;
+                scapeCounter = 0f;
+                isScaping = false;
+            }
+        }
 	
 	}
 

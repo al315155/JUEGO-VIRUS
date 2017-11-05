@@ -7,21 +7,23 @@ public class Movement : MonoBehaviour {
 
 	float 			x, z;
 	public int 		lastX = 0, lastZ = 0;
-	public float 	acceleration = 0f;
+	public float 	acceleration = 1;
+    private float   acceleration_ratio = 2;
 	public float	MAX_ACCELERATION;
 	public float 	velocity;
+    public bool     Running;
 
 	public GameObject levelManager;
 
 	void Start () 
 	{
 		levelManager = GameObject.Find ("Level Manager").gameObject;
+        Running = false;
 	}
 	
 	void Update () 
 	{
 		
-
 	}
 
 	void FixedUpdate()
@@ -30,7 +32,20 @@ public class Movement : MonoBehaviour {
 		x = Input.GetAxis ("Horizontal");
 		z = Input.GetAxis ("Vertical");
 
-		Vector3 movement = new Vector3 (x * velocity * Time.deltaTime, 0f, z * velocity * Time.deltaTime);
+        //SPRINT
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            acceleration = acceleration_ratio;
+            Running = true;
+        }
+        else
+        {
+            acceleration = 1;
+            Running = false;
+        }
+
+		Vector3 movement = new Vector3 (x * velocity * acceleration * Time.deltaTime, 0f, z * velocity * acceleration * Time.deltaTime);
+
 
 		transform.position += movement;
 
