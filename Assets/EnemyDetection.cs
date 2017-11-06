@@ -8,6 +8,7 @@ public class EnemyDetection : MonoBehaviour {
     private StateController controller;
     private Transform lastPoint;
     private float offset = 3f;
+    public int damage;
 
     private void Start()
     {
@@ -72,6 +73,16 @@ public class EnemyDetection : MonoBehaviour {
                 lastPoint.position = other.gameObject.transform.position;
                 controller.chaseTarget = lastPoint;
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Player")
+        {
+            LifeManager.Instance.GetHit(damage);
+            LifeManager.Instance.BuffPlayer();
+            Destroy(this.gameObject);
         }
     }
 

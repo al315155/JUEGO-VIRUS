@@ -94,6 +94,7 @@
     <Compile Include="Assets\ConoVision\csAreaVision.cs" />
     <Compile Include="Assets\ConoVision\csPlayer.cs" />
     <Compile Include="Assets\EnemyDetection.cs" />
+    <Compile Include="Assets\LifeManager.cs" />
     <Compile Include="Assets\Scripts\CamaraMov.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />

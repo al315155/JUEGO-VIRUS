@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour {
 	public int 		lastX = 0, lastZ = 0;
 	public float 	acceleration = 1;
     private float   acceleration_ratio = 2;
+    private float   acceleration_buffed = 0.5f;
 	public float	MAX_ACCELERATION;
 	public float 	velocity;
     public bool     Running;
@@ -20,11 +21,6 @@ public class Movement : MonoBehaviour {
 		levelManager = GameObject.Find ("Level Manager").gameObject;
         Running = false;
 	}
-	
-	void Update () 
-	{
-		
-	}
 
 	void FixedUpdate()
 	{
@@ -35,12 +31,26 @@ public class Movement : MonoBehaviour {
         //SPRINT
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            acceleration = acceleration_ratio;
+            if (!LifeManager.Instance.isBuffed)
+            {
+                acceleration = acceleration_ratio;
+            }
+            else
+            {
+                acceleration = acceleration_ratio / 2;
+            }
             Running = true;
         }
         else
         {
-            acceleration = 1;
+            if (!LifeManager.Instance.isBuffed)
+            {
+                acceleration = 1;
+            }
+            else
+            {
+                acceleration = acceleration_buffed;
+            }
             Running = false;
         }
 
