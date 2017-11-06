@@ -1,15 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StateMachine\BackToPatrolDecision.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Pathfinding\Unit.cs">
     <Files>
-      <File FileName="Assets\Scripts\StateMachine\LookDecision.cs" Line="18" Column="128" />
-      <File FileName="Assets\Scripts\StateMachine\StateController.cs" Line="42" Column="4" />
-      <File FileName="Assets\Scripts\StateMachine\Transition.cs" Line="11" Column="26" />
-      <File FileName="Assets\Scripts\StateMachine\State.cs" Line="16" Column="32" />
-      <File FileName="Assets\Scripts\StateMachine\ChaseAction.cs" Line="15" Column="45" />
-      <File FileName="Assets\Scripts\StateMachine\EnemyStats.cs" Line="5" Column="47" />
-      <File FileName="Assets\Scripts\StateMachine\ActiveStateDecision.cs" Line="9" Column="75" />
-      <File FileName="Assets\Scripts\StateMachine\BackToPatrolDecision.cs" Line="10" Column="54" />
+      <File FileName="Assets\Scripts\Pathfinding\Unit.cs" Line="96" Column="5" />
+      <File FileName="Assets\Scripts\CamaraMov.cs" Line="7" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
