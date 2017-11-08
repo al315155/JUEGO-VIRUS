@@ -15,11 +15,14 @@ public class ConeDecision : Decision {
     {
         if (controller.isPlayerOnSight)
         {
+			//controller.pathfining.SetPlayerGone (true);
             controller.chaseTarget = controller.player;
         }
+
         if (controller.pState == StateController.pursuitState.SCAPED)
         {
             Debug.Log("Estoy en false");
+			controller.pathfining.SetPlayerGone(true);
             controller.pState = StateController.pursuitState.PATROL;
             return false;
         }

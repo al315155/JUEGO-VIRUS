@@ -10,10 +10,11 @@ public class ActiveStateDecision : Decision {
         if (controller.pState == StateController.pursuitState.SCAPED)
         {
             Debug.Log("Estoy en false");
+			controller.pathfining.SetPlayerGone (true);
             controller.pState = StateController.pursuitState.PATROL;
             return false;
         }
-
+			
         bool chaseTargetisActive = controller.chaseTarget.gameObject.activeSelf;
 		return chaseTargetisActive; 
 	}

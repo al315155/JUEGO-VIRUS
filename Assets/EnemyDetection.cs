@@ -55,7 +55,7 @@ public class EnemyDetection : MonoBehaviour {
                 controller.pState = StateController.pursuitState.ALERT;
                 controller.isPlayerHeard = true;
                 lastPoint.position = other.gameObject.transform.position;
-                controller.chaseTarget = lastPoint;
+                //controller.chaseTarget = lastPoint;
             }
         }
     }
@@ -71,7 +71,7 @@ public class EnemyDetection : MonoBehaviour {
                 controller.pState = StateController.pursuitState.ALERT;
                 controller.isPlayerHeard = true;
                 lastPoint.position = other.gameObject.transform.position;
-                controller.chaseTarget = lastPoint;
+                //controller.chaseTarget = lastPoint;
             }
         }
     }
