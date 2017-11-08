@@ -13,20 +13,83 @@ public class Movement : MonoBehaviour {
 	public float	MAX_ACCELERATION;
 	public float 	velocity;
     public bool     Running;
+	public float 	turnSpeed;
+	float yRot = 0f;
 
 	public GameObject levelManager;
 
+	public bool MovementTwoHands;
+
 	void Start () 
 	{
+		if (MovementTwoHands) {
+		} else {
+		}
+
 		levelManager = GameObject.Find ("Level Manager").gameObject;
         Running = false;
+	}
+
+	public void OneHandMovement(){
+		
+	}
+
+	public void TwoHandMovement(){
+		
 	}
 
 	void FixedUpdate()
 	{
 		//Movimiento básico
-		x = Input.GetAxis ("Horizontal");
-		z = Input.GetAxis ("Vertical");
+		//x = Input.GetAxis ("Horizontal");
+		//z = Input.GetAxis ("Vertical");
+
+		if (Input.GetKey (KeyCode.A)) {
+			x = -1;
+		} else if (Input.GetKey (KeyCode.D)) {
+			x = 1;
+		} else {
+			x = 0f;
+		}
+
+		if (Input.GetKey (KeyCode.S)) {
+			z = -1;
+		} else if (Input.GetKey (KeyCode.W)) {
+			z = 1;
+		} else {
+			z = 0f;
+		}
+
+
+
+		//Rotación
+		/*if (Input.anyKeyDown) {*/
+
+			if ((Input.GetKey(KeyCode.LeftArrow))) {
+				yRot += turnSpeed;
+				Quaternion newRotation = Quaternion.Euler (new Vector3(-50f, yRot, 0f));
+				transform.rotation = Quaternion.Slerp (transform.localRotation, newRotation, turnSpeed);
+			}
+
+			if ((Input.GetKey(KeyCode.UpArrow))) {
+				yRot += turnSpeed;
+				Quaternion newRotation = Quaternion.Euler (new Vector3(-50f, yRot, 0f));
+				transform.rotation = Quaternion.Slerp (transform.localRotation, newRotation, turnSpeed);
+			}
+
+			if ((Input.GetKey(KeyCode.DownArrow))) {
+				yRot += turnSpeed;
+				Quaternion newRotation = Quaternion.Euler (new Vector3(-50f, yRot, 0f));
+				transform.rotation = Quaternion.Slerp (transform.localRotation, newRotation, turnSpeed);
+			}
+
+			if ((Input.GetKey(KeyCode.RightArrow))) {
+				yRot += turnSpeed;
+				Quaternion newRotation = Quaternion.Euler (new Vector3(-50f, yRot, 0f));
+				transform.rotation = Quaternion.Slerp (transform.localRotation, newRotation, turnSpeed);
+			}
+
+		//}
 
         //SPRINT
         if (Input.GetKey(KeyCode.LeftShift))
@@ -53,11 +116,14 @@ public class Movement : MonoBehaviour {
             }
             Running = false;
         }
-
-		Vector3 movement = new Vector3 (x * velocity * acceleration * Time.deltaTime, 0f, z * velocity * acceleration * Time.deltaTime);
-
+			
+		
+		Vector3 movement = new Vector3 (x * velocity * acceleration * Time.deltaTime,
+										0f,
+										z * velocity * acceleration * Time.deltaTime);
 
 		transform.position += movement;
+
 
 		//Movimiento con efecto de frenazo
 		/*x = Input.GetAxis("Horizontal");

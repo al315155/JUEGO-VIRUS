@@ -67,7 +67,7 @@ public class EnemyDetection : MonoBehaviour {
         if (other.gameObject.name == "Player" && controller.pState != StateController.pursuitState.FOLLOWING)
         {
             //other.gameobject es nuestro jugador.
-            if (other.gameObject.GetComponent<Movement>().Running)
+            if (other.gameObject.GetComponent<Player>().running)
             {
                 //controller.isPlayerOnSight = true;
                 controller.pState = StateController.pursuitState.ALERT;

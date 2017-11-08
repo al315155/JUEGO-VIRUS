@@ -72,7 +72,11 @@
      <Compile Include="Assets\Scripts\Pathfinding\Pathfinding.cs" />
      <Compile Include="Assets\Scripts\Pathfinding\PathRequestManager.cs" />
      <Compile Include="Assets\Scripts\Pathfinding\Unit.cs" />
+     <Compile Include="Assets\Scripts\Player\IMovement.cs" />
      <Compile Include="Assets\Scripts\Player\Movement.cs" />
+     <Compile Include="Assets\Scripts\Player\OneHandMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\TwoHandMovement.cs" />
      <Compile Include="Assets\Scripts\StateMachine\Action.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ActiveStateDecision.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ChaseAction.cs" />
