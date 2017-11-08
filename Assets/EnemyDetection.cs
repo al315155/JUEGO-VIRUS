@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyDetection : MonoBehaviour {
 
     private StateController controller;
-    private Transform lastPoint;
+    public Transform lastPoint;
     private float offset = 3f;
     public int damage;
 
@@ -51,9 +51,11 @@ public class EnemyDetection : MonoBehaviour {
             //other.gameobject es nuestro jugador.
             if (other.gameObject.GetComponent<Movement>().Running)
             {
+				Debug.Log ("Deberias oirme");
                 //controller.isPlayerOnSight = true;
                 controller.pState = StateController.pursuitState.ALERT;
                 controller.isPlayerHeard = true;
+
                 lastPoint.position = other.gameObject.transform.position;
                 //controller.chaseTarget = lastPoint;
             }
@@ -70,6 +72,7 @@ public class EnemyDetection : MonoBehaviour {
                 //controller.isPlayerOnSight = true;
                 controller.pState = StateController.pursuitState.ALERT;
                 controller.isPlayerHeard = true;
+
                 lastPoint.position = other.gameObject.transform.position;
                 //controller.chaseTarget = lastPoint;
             }

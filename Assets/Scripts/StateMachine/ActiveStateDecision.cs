@@ -15,7 +15,10 @@ public class ActiveStateDecision : Decision {
             return false;
         }
 			
-        bool chaseTargetisActive = controller.chaseTarget.gameObject.activeSelf;
-		return chaseTargetisActive; 
+		//que es esto
+        //bool chaseTargetisActive = controller.chaseTarget.gameObject.activeSelf;
+		//return chaseTargetisActive; 
+
+		return true;
 	}
 }

@@ -30,6 +30,8 @@ public class StateController : MonoBehaviour {
 
 	void Awake()
 	{
+		chaseTarget = null;
+
 		pathfining = GetComponent<Unit> ();
 
 		player = GameObject.FindGameObjectWithTag("Player").transform;
