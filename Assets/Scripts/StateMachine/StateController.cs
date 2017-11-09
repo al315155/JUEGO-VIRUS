@@ -9,6 +9,7 @@ public class StateController : MonoBehaviour {
 	private int finishedPasses;
 	public Vector3 leftVector;
 	public Vector3 rightVector;
+	public bool changePoint = false;
 
 	public Unit pathfining;
 	public int Pases;

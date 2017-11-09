@@ -12,6 +12,11 @@ public class PatrolAction : Action {
 
 	private void Patrol (StateController controller)
 	{
+		if (controller.changePoint) {
+			controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
+			controller.pathfining.SetFinished ();
+			controller.changePoint = false;
+		}
 		controller.pathfining.SetTarget(controller.wayPointList[controller.nextWayPoint].transform);
 	}
 		

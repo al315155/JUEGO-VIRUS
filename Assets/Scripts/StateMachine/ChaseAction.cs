@@ -10,10 +10,6 @@ public class ChaseAction : Action {
 	}
 
 	private void Chase(StateController controller){
-		//controller.navMeshAgent.destination = controller.chaseTarget.position;
-		//controller.navMeshAgent.isStopped = false;
-
-		//pasarle al pathfinding la posicion del jugador
 
 		if (controller.isPlayerHeard && !controller.isPlayerOnSight) {
 			controller.GetComponent<Unit> ().SetTarget (controller.GetComponent<EnemyDetection> ().lastPoint);

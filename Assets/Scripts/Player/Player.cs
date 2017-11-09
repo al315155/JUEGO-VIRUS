@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
 	public bool running;
 	LifeManager lifeManager;
 
+	public EnemyDetection enemyDetection;
+
 
 	void Awake(){
 

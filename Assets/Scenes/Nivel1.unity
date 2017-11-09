@@ -552,10 +552,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
   pathfining: {fileID: 0}
   Pases: 0
-  patrolInPlaceFinished: 0
-  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -1101,7 +1103,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205102231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -660, y: 321.76062, z: 0}
+  m_LocalPosition: {x: -660, y: 420.41913, z: 0}
   m_LocalScale: {x: 2.6627903, y: 2.6627903, z: 2.6627903}
   m_Children:
   - {fileID: 323118805}
@@ -1219,8 +1221,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214777602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 445.5, y: 207, z: 0}
-  m_LocalScale: {x: 0.4640625, y: 0.4640625, z: 0.4640625}
+  m_LocalPosition: {x: 445, y: 252.5, z: 0}
+  m_LocalScale: {x: 0.46354166, y: 0.46354166, z: 0.46354166}
   m_Children:
   - {fileID: 856928330}
   - {fileID: 2022272011}
@@ -2176,10 +2178,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
   pathfining: {fileID: 0}
   Pases: 0
-  patrolInPlaceFinished: 0
-  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -3733,10 +3737,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
   pathfining: {fileID: 0}
   Pases: 0
-  patrolInPlaceFinished: 0
-  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -4727,7 +4733,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 856928329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -660, y: 346.0606, z: 0}
+  m_LocalPosition: {x: -660, y: 444.71912, z: 0}
   m_LocalScale: {x: 2.6627893, y: 2.662791, z: 2.662791}
   m_Children:
   - {fileID: 1913939740}
@@ -5899,6 +5905,7 @@ GameObject:
   - component: {fileID: 1105130710}
   - component: {fileID: 1105130706}
   - component: {fileID: 1105130704}
+  - component: {fileID: 1105130705}
   m_Layer: 0
   m_Name: Enemy_01
   m_TagString: Enemy
@@ -5942,6 +5949,19 @@ MonoBehaviour:
   turnSpeed: 3
   stoppingDst: 10
   finished: 0
+--- !u!114 &1105130705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105130702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c73cde80b5ff5448b2b89240ed59ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastPoint: {fileID: 0}
+  damage: 20
 --- !u!114 &1105130706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5954,10 +5974,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
   pathfining: {fileID: 0}
   Pases: 4
-  patrolInPlaceFinished: 0
-  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -6278,10 +6300,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
   pathfining: {fileID: 0}
   Pases: 0
-  patrolInPlaceFinished: 0
-  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -9041,6 +9065,7 @@ MonoBehaviour:
   forward: 1
   backward: -1
   running: 0
+  enemyDetection: {fileID: 0}
 --- !u!1 &1888986021
 GameObject:
   m_ObjectHideFlags: 0
