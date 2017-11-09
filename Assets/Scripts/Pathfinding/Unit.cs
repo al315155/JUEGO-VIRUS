@@ -112,16 +112,7 @@ public class Unit : MonoBehaviour {
 				
 				transform.Translate (Vector3.forward * Time.deltaTime * speed * speedPercent, Space.Self);
 			}
-
-			/*if (!followingPath) {
-				if (target == wayPoints [0])
-					target = wayPoints [1];
-				else if (target == wayPoints [1]) {
-					target = wayPoints [0];
-				} else
-					target = wayPoints [1];
-			}*/
-
+				
 			yield return null;
 		}
 

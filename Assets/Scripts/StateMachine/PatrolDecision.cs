@@ -12,17 +12,13 @@ namespace AssemblyCSharp
 		public override bool Decide(StateController controller)
 		{
 			if (controller.CountPasses () >= controller.Pases) {
-				Debug.Log (controller.CountPasses ());
-				Debug.Log (controller.Pases);
-
-				controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
-				//controller.pathfining.SetFinished ();
-				Debug.Log("return true deberia cambiar");
-				return true;
-			} else {
-				Debug.Log ("return false");
-				return false;
+				if (controller.pathfining.Finished()) {
+					controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
+					Debug.Log ("sigoejecutandome");
+					return true;
+				}
 			}
+				return false;
 		}
 	}
 }
