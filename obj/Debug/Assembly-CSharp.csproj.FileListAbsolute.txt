@@ -64,6 +64,6 @@ C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS\Temp\bin\Debug\UnityEngine.UIAutoma
 C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS\Temp\bin\Debug\UnityEngine.GoogleAudioSpatializer.xml
 C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
-C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS\obj\Debug\Assembly-CSharp.dll
 C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache

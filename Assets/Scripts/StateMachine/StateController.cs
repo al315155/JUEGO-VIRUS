@@ -5,7 +5,13 @@ using UnityEngine.AI;
 
 public class StateController : MonoBehaviour {
 
+	public Vector3 destination;
+	private int finishedPasses;
+	public Vector3 leftVector;
+	public Vector3 rightVector;
+
 	public Unit pathfining;
+	public int Pases;
 
 	public State currentState;
 	public State remainState;
@@ -28,8 +34,16 @@ public class StateController : MonoBehaviour {
 	[HideInInspector] public int nextWayPoint;
 	[HideInInspector] public Transform chaseTarget;
 
+
+	public void AddPass(){ finishedPasses += 1; }
+	public int CountPasses(){ return finishedPasses; }
+	public void BeginPasses(){finishedPasses = 0;}
+
+
 	void Awake()
 	{
+		finishedPasses = 0;
+
 		chaseTarget = null;
 
 		pathfining = GetComponent<Unit> ();
@@ -41,21 +55,10 @@ public class StateController : MonoBehaviour {
 
 		playerHasFled = false;
 		isPlayerOnSight = false;
-
-
-
-		/*navMeshAgent = GetComponent<NavMeshAgent> ();
-		navMeshAgent.enabled = true;
-        acceleration_speed = navMeshAgent.speed * 2f;
-        basic_speed = navMeshAgent.speed;*/
 	}
 
 	void Update()
 	{
-        //TODO: Cambiar esto con listeners para que sea más eficiente.
-        //if (isPlayerOnSight || isPlayerHeard) navMeshAgent.speed = acceleration_speed;
-       //else navMeshAgent.speed = basic_speed;
-
 		currentState.UpdateState (this);
 	}
 
@@ -76,5 +79,5 @@ public class StateController : MonoBehaviour {
 		}
 	}
 
-    public enum pursuitState { PATROL, FOLLOWING, ALERT, SCAPED }
+    public enum pursuitState { PATROL, FOLLOWING, ALERT, SCAPED, PATROLINPLACE }
 }

@@ -18,6 +18,7 @@ public class ChangeConeMaterial : MonoBehaviour {
         switch (_state)
         {
             case stateMaterial.PATROL:
+			case stateMaterial.PATROLINPLACE:
                 m_meshRenderer.materials[0].mainTexture = m_materials[0];
                 break;
             case stateMaterial.PURSUIT:
@@ -30,4 +31,4 @@ public class ChangeConeMaterial : MonoBehaviour {
     }
 }
 
-public enum stateMaterial { PATROL, PURSUIT}
+public enum stateMaterial { PATROL, PATROLINPLACE, PURSUIT}

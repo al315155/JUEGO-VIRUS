@@ -301,7 +301,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4010153358833400, guid: d3b9f1b05758f63439a2cb780e3d7b8b, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1383292907138710, guid: d3b9f1b05758f63439a2cb780e3d7b8b, type: 2}
       propertyPath: m_Name
@@ -489,7 +489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &133512654
 Transform:
   m_ObjectHideFlags: 0
@@ -553,6 +553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathfining: {fileID: 0}
+  Pases: 0
+  patrolInPlaceFinished: 0
+  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -674,7 +677,7 @@ Transform:
   - {fileID: 353572077}
   - {fileID: 278168836}
   m_Father: {fileID: 598583466}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &146039481
 GameObject:
@@ -789,12 +792,12 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164532485}
-  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 80.97166, y: 369.36472, z: -219.99518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 80.97166, y: 371.36472, z: -219.99518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 598583466}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &164532487
 MonoBehaviour:
@@ -1098,7 +1101,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205102231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -660.00006, y: 324.2779, z: 0}
+  m_LocalPosition: {x: -660, y: 321.76062, z: 0}
   m_LocalScale: {x: 2.6627903, y: 2.6627903, z: 2.6627903}
   m_Children:
   - {fileID: 323118805}
@@ -1216,8 +1219,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214777602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 443, y: 207, z: 0}
-  m_LocalScale: {x: 0.4614583, y: 0.4614583, z: 0.4614583}
+  m_LocalPosition: {x: 445.5, y: 207, z: 0}
+  m_LocalScale: {x: 0.4640625, y: 0.4640625, z: 0.4640625}
   m_Children:
   - {fileID: 856928330}
   - {fileID: 2022272011}
@@ -2110,7 +2113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &393598319
 Transform:
   m_ObjectHideFlags: 0
@@ -2174,6 +2177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathfining: {fileID: 0}
+  Pases: 0
+  patrolInPlaceFinished: 0
+  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -3218,11 +3224,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 164532486}
   - {fileID: 138413446}
   - {fileID: 2089124235}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611388054
 GameObject:
@@ -3665,7 +3670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &712133107
 Transform:
   m_ObjectHideFlags: 0
@@ -3729,6 +3734,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathfining: {fileID: 0}
+  Pases: 0
+  patrolInPlaceFinished: 0
+  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -4719,7 +4727,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 856928329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -660.00006, y: 348.5779, z: 0}
+  m_LocalPosition: {x: -660, y: 346.0606, z: 0}
   m_LocalScale: {x: 2.6627893, y: 2.662791, z: 2.662791}
   m_Children:
   - {fileID: 1913939740}
@@ -5891,7 +5899,6 @@ GameObject:
   - component: {fileID: 1105130710}
   - component: {fileID: 1105130706}
   - component: {fileID: 1105130704}
-  - component: {fileID: 1105130705}
   m_Layer: 0
   m_Name: Enemy_01
   m_TagString: Enemy
@@ -5935,19 +5942,6 @@ MonoBehaviour:
   turnSpeed: 3
   stoppingDst: 10
   finished: 0
---- !u!114 &1105130705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1105130702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c73cde80b5ff5448b2b89240ed59ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastPoint: {fileID: 0}
-  damage: 20
 --- !u!114 &1105130706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5961,6 +5955,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathfining: {fileID: 0}
+  Pases: 4
+  patrolInPlaceFinished: 0
+  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -6218,7 +6215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1194507216
 Transform:
   m_ObjectHideFlags: 0
@@ -6282,6 +6279,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathfining: {fileID: 0}
+  Pases: 0
+  patrolInPlaceFinished: 0
+  YDirection: 0
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
   pState: 0
@@ -7994,7 +7994,7 @@ Transform:
   - {fileID: 203681181}
   - {fileID: 7976248}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1651265301
 GameObject:
@@ -8892,7 +8892,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9031,7 +9031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration_const: 1
   speed_const: 10
-  turnSpeed_const: 100
+  turnSpeed_const: 150
   TypeOfMovement: 0
   hint: TypeOfMovement true if you want to play with one hand and the character will
     turn for itself, if you want to control its rotation, TypeOfMovement false!
@@ -10119,7 +10119,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 598583466}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 43.04, y: 0, z: 0}
 --- !u!108 &2089124236
 Light:

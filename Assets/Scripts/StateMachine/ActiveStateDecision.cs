@@ -14,6 +14,12 @@ public class ActiveStateDecision : Decision {
             controller.pState = StateController.pursuitState.PATROL;
             return false;
         }
+
+	/*	if (controller.pathfining.Finished ()) {
+			controller.pState = StateController.pursuitState.PATROLINPLACE;
+			return false;
+		}*/
+		//return true;
 			
 		//que es esto
         //bool chaseTargetisActive = controller.chaseTarget.gameObject.activeSelf;
