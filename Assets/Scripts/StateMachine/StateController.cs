@@ -10,6 +10,7 @@ public class StateController : MonoBehaviour {
 	public Vector3 leftVector;
 	public Vector3 rightVector;
 	public bool changePoint = false;
+	public bool patrolIsActive = true;
 
 	public Unit pathfining;
 	public int Pases;

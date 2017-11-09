@@ -25,7 +25,7 @@ public class ConeDecision : Decision {
             controller.pState = StateController.pursuitState.PATROL;
             return false;
         }
-
+		Debug.Log(controller.isPlayerOnSight || controller.isPlayerHeard);
         return controller.isPlayerOnSight || controller.isPlayerHeard;
     }
 

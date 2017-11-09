@@ -10,12 +10,15 @@ namespace AssemblyCSharp
 	{
 		public override bool Decide(StateController controller)
 		{
-			if (controller.pathfining.Finished ()) {
+			controller.patrolIsActive = false;
+
+			if (controller.pathfining.Finished ()&& controller.patrolIsActive==false) {
 				controller.BeginPasses ();
 				controller.leftVector = controller.transform.rotation.eulerAngles + new Vector3(0, -90f, 0);
 				controller.rightVector = controller.transform.rotation.eulerAngles + new Vector3(0, 90f, 0);
 
 				controller.destination = controller.leftVector;
+				controller.patrolIsActive = true;
 				return true;
 			}
 			return false;

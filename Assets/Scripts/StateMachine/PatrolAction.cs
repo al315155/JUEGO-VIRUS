@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu (menuName="AI/Actions/Patrol")]
 public class PatrolAction : Action {
-
+	
 	public override void Act (StateController controller)
 	{
 		Patrol (controller);  
@@ -12,10 +12,15 @@ public class PatrolAction : Action {
 
 	private void Patrol (StateController controller)
 	{
-		if (controller.changePoint) {
+		/*if (controller.changePoint) {
 			controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
 			controller.pathfining.SetFinished ();
 			controller.changePoint = false;
+		}*/
+
+		if (controller.pathfining.Finished () && controller.patrolIsActive==true) {
+			controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
+			controller.pathfining.SetFinished ();
 		}
 		controller.pathfining.SetTarget(controller.wayPointList[controller.nextWayPoint].transform);
 	}
