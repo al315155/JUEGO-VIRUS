@@ -15,7 +15,6 @@ public class LevelManager : MonoBehaviour {
 	public Transform Player;
 
 	// Use this for initialization
-
 	void Start () 
 	{
 		currentLevel = 0;
@@ -23,7 +22,8 @@ public class LevelManager : MonoBehaviour {
 		StartPosition = lookForEntry ();
 		FinishedPosition = lookForExit ();
 
-
+		Player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
+        Player.position = StartPosition.position;
 	}
 		
 	void Awake()
@@ -32,9 +32,6 @@ public class LevelManager : MonoBehaviour {
 		{
 			level.SetActive (false);
 		}
-
-		Player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
-		Player.position = StartPosition.position;
 	}
 	// Update is called once per frame
 	void Update () {

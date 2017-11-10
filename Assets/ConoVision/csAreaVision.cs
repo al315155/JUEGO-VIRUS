@@ -16,6 +16,8 @@ public class csAreaVision : MonoBehaviour {
     private StateController m_stateController;
     private ChangeConeMaterial m_changeConeMaterial;
 
+    private List<GameObject> nearEnemies = new List<GameObject>();
+
 	MeshFilter meshFilter;
 
 	Vector3 oldPosition;
@@ -130,8 +132,15 @@ public class csAreaVision : MonoBehaviour {
 
         if (playerFound > 0)
         {
-            m_stateController.isPlayerOnSight = true;
-            m_stateController.pState = StateController.pursuitState.FOLLOWING;
+            if (!m_stateController.isPlayerOnSight)
+            {
+                nearEnemies = HiveMindController.Instance.GetNearEnemies(this.gameObject);
+                foreach (GameObject g in nearEnemies)
+                {
+                    g.GetComponent<StateController>().isPlayerOnSight = true;
+                    g.GetComponent<StateController>().pState = StateController.pursuitState.FOLLOWING;
+                }
+            }
         }
         else
         {

@@ -85,6 +85,7 @@ public class EnemyDetection : MonoBehaviour {
         {
             LifeManager.Instance.GetHit(damage);
             LifeManager.Instance.BuffPlayer();
+            HiveMindController.Instance.RemoveEnemy(this.gameObject);
             Destroy(this.gameObject);
         }
     }

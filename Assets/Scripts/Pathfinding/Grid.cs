@@ -33,13 +33,14 @@ public class Grid : MonoBehaviour {
 			walkableMask.value = walkableMask |= region.terrainMask.value;
 			walkableRegionsDictionary.Add ((int) Mathf.Log(region.terrainMask.value, 2), region.terrainPenalty * 2);
 		}
-		CreateGrid ();
+		
 
 
 	}
 
 	void Start(){
-	}
+        CreateGrid();
+    }
 
 	//esta funcion permite dibujar el area por cuadraditos, como su fuera un tablero
 	void CreateGrid(){
@@ -62,7 +63,7 @@ public class Grid : MonoBehaviour {
 				if (!walkable) {
 					
 					movementPenalty += obstacleProximityPenalty;
-					Debug.Log (movementPenalty);
+					//Debug.Log (movementPenalty);
 				}
 
 				grid [x, y] = new Node (walkable, worldPoint, x, y, movementPenalty * 10);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour {
 
@@ -120,7 +121,8 @@ public class Movement : MonoBehaviour {
 	{
 		if (col.tag == "Exit") 
 		{
-			levelManager.GetComponent<LevelManager> ().changeLevel ();
+            //levelManager.GetComponent<LevelManager> ().changeLevel ();
+            SceneManager.LoadScene("JerryHaMuerto");
 		}
 
 		else if(col.tag == "Enemy")
