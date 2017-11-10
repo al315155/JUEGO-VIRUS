@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyDetection : MonoBehaviour {
 
+	public ParticleSystem particleSystem;
+	public Light light;
     private StateController controller;
     public Transform lastPoint;
     private float offset = 3f;
@@ -12,6 +14,8 @@ public class EnemyDetection : MonoBehaviour {
 
     private void Start()
     {
+		particleSystem.Stop ();
+		light.enabled = false;
         controller = GetComponent<StateController>();
         lastPoint = new GameObject().transform;
     }
@@ -79,14 +83,22 @@ public class EnemyDetection : MonoBehaviour {
         }
     }
 
+	IEnumerator StartToDie(){
+		light.enabled = true;
+		particleSystem.Play();
+		yield return new WaitForSeconds (.7f);
+		HiveMindController.Instance.RemoveEnemy(this.gameObject);
+		Destroy(this.gameObject);
+	} 
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.name == "Player")
         {
+			StartCoroutine ("StartToDie");
+
             LifeManager.Instance.GetHit(damage);
             LifeManager.Instance.BuffPlayer();
-            HiveMindController.Instance.RemoveEnemy(this.gameObject);
-            Destroy(this.gameObject);
         }
     }
 

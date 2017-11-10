@@ -24,7 +24,6 @@ public class StateController : MonoBehaviour {
     //public float acceleration_speed;
     public float basic_speed;
 
-	//[HideInInspector] public NavMeshAgent navMeshAgent;
 	[HideInInspector] public int nextWayPoint;
 	[HideInInspector] public Transform chaseTarget;
 
@@ -41,13 +40,6 @@ public class StateController : MonoBehaviour {
 
 		playerHasFled = false;
 		isPlayerOnSight = false;
-
-
-
-		/*navMeshAgent = GetComponent<NavMeshAgent> ();
-		navMeshAgent.enabled = true;
-        acceleration_speed = navMeshAgent.speed * 2f;
-        basic_speed = navMeshAgent.speed;*/
 	}
 
 	void Update()

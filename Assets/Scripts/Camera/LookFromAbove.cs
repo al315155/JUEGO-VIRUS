@@ -12,7 +12,7 @@ public class LookFromAbove : ICameraMovement {
 		    camera.GetComponent<CamaraMov> ().Offset
 			&& 
 			Mathf.Abs(camera.GetComponent<CamaraMov>().DistanceFromPlayer() -
-				camera.GetComponent<CamaraMov>().Offset) >= 1) {
+				camera.GetComponent<CamaraMov>().Offset) >= 3) {
 			
 			camera.position += Vector3.forward * speed * Time.deltaTime;
 
@@ -20,7 +20,7 @@ public class LookFromAbove : ICameraMovement {
 		           camera.GetComponent<CamaraMov> ().Offset
 			&& 
 			Mathf.Abs(camera.GetComponent<CamaraMov>().DistanceFromPlayer() -
-				camera.GetComponent<CamaraMov>().Offset) >= 1) {
+				camera.GetComponent<CamaraMov>().Offset) >= 3) {
 			
 			camera.position -= Vector3.forward * speed * Time.deltaTime;
 		}

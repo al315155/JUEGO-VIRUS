@@ -1,19 +1,27 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera\CamaraMov.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera\LookFromAbove.cs">
     <Files>
-      <File FileName="Assets\Scripts\Pathfinding\Unit.cs" Line="114" Column="1" />
+      <File FileName="Assets\Scripts\Pathfinding\Unit.cs" Line="77" Column="79" />
       <File FileName="Assets\Scripts\Pathfinding\Line.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Pathfinding\Heap.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Player.cs" Line="7" Column="1" />
-      <File FileName="Assets\Scripts\Player\TwoHandMovement.cs" Line="39" Column="19" />
-      <File FileName="Assets\Scripts\Player\Movement.cs" Line="5" Column="34" />
+      <File FileName="Assets\Scripts\Player\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\TwoHandMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Movement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Camera\ICameraMovement.cs" Line="10" Column="62" />
-      <File FileName="Assets\Scripts\Camera\NewBehaviourScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Camera\CamaraMov.cs" Line="9" Column="1" />
+      <File FileName="Assets\Scripts\Camera\CamaraMov.cs" Line="57" Column="5" />
       <File FileName="Assets\Scripts\Camera\LookAtPlayer.cs" Line="18" Column="21" />
-      <File FileName="Assets\Scripts\Camera\LookFromAbove.cs" Line="17" Column="4" />
+      <File FileName="Assets\Scripts\Camera\LookFromAbove.cs" Line="23" Column="50" />
       <File FileName="Assets\Scripts\Camera\LookCloser.cs" Line="21" Column="4" />
+      <File FileName="Assets\Scripts\Pathfinding\Grid.cs" Line="37" Column="16" />
+      <File FileName="Assets\Scripts\StateMachine\StateController.cs" Line="31" Column="3" />
+      <File FileName="Assets\ChangeConeMaterial.cs" Line="1" Column="1" />
+      <File FileName="Assets\EnemyDetection.cs" Line="17" Column="26" />
+      <File FileName="Assets\Scripts\StateMachine\Transition.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StateMachine\PatrolnPlaceDecision.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StateMachine\PatrolnPlaceAction.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StateMachine\PatrolAction.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StateMachine\State.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
