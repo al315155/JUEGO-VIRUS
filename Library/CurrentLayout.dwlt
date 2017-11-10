@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 68
+  controlID: 152
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 10
+  controlID: 60
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 44
+  controlID: 82
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -491,10 +491,10 @@ MonoBehaviour:
     width: 331
     height: 249
   m_TreeViewState:
-    scrollPos: {x: 0, y: 168}
-    m_SelectedIDs: c02a0000
-    m_LastClickedID: 10944
-    m_ExpandedIDs: 82fbffff00000000182a0000482a00009a2a0000d62a00005e2b0000742c0000982c0000682d0000782e0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 58080000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 68faffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -544,7 +544,7 @@ MonoBehaviour:
     width: 331
     height: 344
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: ENE
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -555,19 +555,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Camera
+    - Assets/Scripts/StateMachine
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Camera
+  - Assets/Scripts/StateMachine
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Rebeca\Documents\GitHub\JUEGO-VIRUS
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 61}
-    m_SelectedIDs: 82280000
-    m_LastClickedID: 10370
-    m_ExpandedIDs: 00000000022800000828000076280000d6280000e82800002229000000ca9a3bffffff7f
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000762800007c280000e8280000482900005a2900009029000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -595,7 +595,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000022800000828000076280000d6280000e828000022290000
+    m_ExpandedIDs: 00000000762800007c280000e8280000482900005a29000090290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -676,7 +676,7 @@ MonoBehaviour:
     y: 92
     width: 397
     height: 614
-  m_ScrollPosition: {x: 0, y: 188.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 100
