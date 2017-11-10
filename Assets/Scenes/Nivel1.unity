@@ -2228,7 +2228,7 @@ MonoBehaviour:
   rotationX: 90
   rotationY: 0
   rotationZ: 0
-  cameraType: 1
+  cameraType: 2
   CameraHeight: 40
   CameraSpeed: 10
   DstFromPlayer: 0
