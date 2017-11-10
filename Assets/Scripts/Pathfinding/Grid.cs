@@ -34,12 +34,12 @@ public class Grid : MonoBehaviour {
 			walkableRegionsDictionary.Add ((int) Mathf.Log(region.terrainMask.value, 2), region.terrainPenalty * 2);
 		}
 		
-
+		CreateGrid();
 
 	}
 
 	void Start(){
-        CreateGrid();
+      
     }
 
 	//esta funcion permite dibujar el area por cuadraditos, como su fuera un tablero

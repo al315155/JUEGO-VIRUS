@@ -54,7 +54,7 @@ public class CamaraMov : MonoBehaviour
     }
 
 	public float DistanceFromPlayer(){
-		Debug.Log(Mathf.Abs(Mathf.Abs(transform.position.z) - Mathf.Abs(player.position.z)));
+		//Debug.Log(Mathf.Abs(Mathf.Abs(transform.position.z) - Mathf.Abs(player.position.z)));
 		return Mathf.Abs(Mathf.Abs(transform.position.z) - Mathf.Abs(player.position.z));
 	}
 }

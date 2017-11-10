@@ -9,10 +9,19 @@ public class LookFromAbove : ICameraMovement {
 
 	public void Move(float speed, Transform camera, Transform player){
 		if (camera.GetComponent<CamaraMov> ().DistanceFromPlayer () >
-		    camera.GetComponent<CamaraMov> ().Offset) {
+		    camera.GetComponent<CamaraMov> ().Offset
+			&& 
+			Mathf.Abs(camera.GetComponent<CamaraMov>().DistanceFromPlayer() -
+				camera.GetComponent<CamaraMov>().Offset) >= 1) {
+			
 			camera.position += Vector3.forward * speed * Time.deltaTime;
+
 		} else if (camera.GetComponent<CamaraMov> ().DistanceFromPlayer () <
-		           camera.GetComponent<CamaraMov> ().Offset) {
+		           camera.GetComponent<CamaraMov> ().Offset
+			&& 
+			Mathf.Abs(camera.GetComponent<CamaraMov>().DistanceFromPlayer() -
+				camera.GetComponent<CamaraMov>().Offset) >= 1) {
+			
 			camera.position -= Vector3.forward * speed * Time.deltaTime;
 		}
 	}

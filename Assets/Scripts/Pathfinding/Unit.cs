@@ -73,7 +73,9 @@ public class Unit : MonoBehaviour {
 		int pathIndex = 0;
 
 		if (target.tag != "Player") {
-			transform.LookAt (path.lookPoints [0]);
+			Quaternion newRotation = Quaternion.Euler (new Vector3 (0f, path.lookPoints [0].y, 0f));
+			transform.rotation = Quaternion.Slerp (transform.rotation, newRotation, 0.2f);
+			//transform.LookAt (path.lookPoints [0]);
 		}
 
 		float speedPercent = 1;
