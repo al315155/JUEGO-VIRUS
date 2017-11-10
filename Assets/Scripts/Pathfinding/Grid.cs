@@ -63,7 +63,6 @@ public class Grid : MonoBehaviour {
 				if (!walkable) {
 					
 					movementPenalty += obstacleProximityPenalty;
-					//Debug.Log (movementPenalty);
 				}
 
 				grid [x, y] = new Node (walkable, worldPoint, x, y, movementPenalty * 10);
@@ -74,8 +73,6 @@ public class Grid : MonoBehaviour {
 	}
 
 	private void BlurPenaltyMap(int blurSize){
-
-		Debug.Log ("Dibujando Grid!");
 
 		int kernelSize = blurSize * 2 + 1;
 		int kernelExtents = (kernelSize - 1) / 2;
@@ -113,8 +110,6 @@ public class Grid : MonoBehaviour {
 				penaltiesVerticalPass [x, y] = penaltiesVerticalPass [x, y-1] - penaltiesHorizontalPass [x, removeIndex] + penaltiesHorizontalPass [x, addIndex];
 				blurredPenalty = Mathf.RoundToInt ((float)penaltiesVerticalPass [x, y] / (kernelSize * kernelSize));
 				grid [x, y].movementPenalty = blurredPenalty;
-
-			//	Debug.Log (blurredPenalty);
 
 				if (blurredPenalty > penaltyMax) {
 					penaltyMax = blurredPenalty;
