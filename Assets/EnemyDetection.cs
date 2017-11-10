@@ -48,16 +48,13 @@ public class EnemyDetection : MonoBehaviour {
     {
         if (other.gameObject.name == "Player" && controller.pState!=StateController.pursuitState.FOLLOWING)
         {
-            //other.gameobject es nuestro jugador.
             if (other.gameObject.GetComponent<Player>().running)
             {
 				Debug.Log ("Deberias oirme");
-                //controller.isPlayerOnSight = true;
                 controller.pState = StateController.pursuitState.ALERT;
                 controller.isPlayerHeard = true;
 
                 lastPoint.position = other.gameObject.transform.position;
-                //controller.chaseTarget = lastPoint;
             }
         }
     }
@@ -66,15 +63,12 @@ public class EnemyDetection : MonoBehaviour {
     {
         if (other.gameObject.name == "Player" && controller.pState != StateController.pursuitState.FOLLOWING)
         {
-            //other.gameobject es nuestro jugador.
             if (other.gameObject.GetComponent<Player>().running)
             {
-                //controller.isPlayerOnSight = true;
                 controller.pState = StateController.pursuitState.ALERT;
                 controller.isPlayerHeard = true;
 
                 lastPoint.position = other.gameObject.transform.position;
-                //controller.chaseTarget = lastPoint;
             }
         }
     }
@@ -83,7 +77,6 @@ public class EnemyDetection : MonoBehaviour {
     {
         if(collision.gameObject.name == "Player")
         {
-			Debug.Log ("pene");
             LifeManager.Instance.GetHit(damage);
             LifeManager.Instance.BuffPlayer();
             Destroy(this.gameObject);

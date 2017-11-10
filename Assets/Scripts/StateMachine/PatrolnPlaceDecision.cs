@@ -12,12 +12,13 @@ namespace AssemblyCSharp
 		{
 			if (controller.pathfining.Finished ()) {
 				controller.BeginPasses ();
-				controller.leftVector = controller.transform.rotation.eulerAngles + new Vector3(0, -90f, 0);
-				controller.rightVector = controller.transform.rotation.eulerAngles + new Vector3(0, 90f, 0);
+				controller.leftVector = controller.transform.rotation.eulerAngles + new Vector3 (0, -90f, 0);
+				controller.rightVector = controller.transform.rotation.eulerAngles + new Vector3 (0, 90f, 0);
 
 				controller.destination = controller.leftVector;
 				return true;
 			}
+
 			return false;
 		}
 	}

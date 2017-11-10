@@ -17,6 +17,7 @@ public class PatrolAction : Action {
 			controller.pathfining.SetFinished ();
 			controller.changePoint = false;
 		}
+			
 		controller.pathfining.SetTarget(controller.wayPointList[controller.nextWayPoint].transform);
 	}
 		

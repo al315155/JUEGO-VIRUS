@@ -7,24 +7,20 @@ public class ActiveStateDecision : Decision {
 
 	public override bool Decide (StateController controller){
 
-        if (controller.pState == StateController.pursuitState.SCAPED)
-        {
-            Debug.Log("Estoy en false");
+		if (controller.pState == StateController.pursuitState.SCAPED) {
 			controller.pathfining.SetPlayerGone (true);
-            controller.pState = StateController.pursuitState.PATROL;
-            return false;
-        }
-
-	/*	if (controller.pathfining.Finished ()) {
-			controller.pState = StateController.pursuitState.PATROLINPLACE;
+			controller.pState = StateController.pursuitState.PATROL;
 			return false;
-		}*/
-		//return true;
-			
-		//que es esto
-        //bool chaseTargetisActive = controller.chaseTarget.gameObject.activeSelf;
-		//return chaseTargetisActive; 
 
-		return true;
+		} else {
+			if (controller.isPlayerOnSight)
+			{
+				controller.chaseTarget = controller.player;
+			}
+
+			if (controller.isPlayerOnSight) controller.pState = StateController.pursuitState.FOLLOWING;
+
+			return controller.isPlayerOnSight || controller.isPlayerHeard;
+		}
 	}
 }

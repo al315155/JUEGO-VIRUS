@@ -15,7 +15,6 @@ public class ConeDecision : Decision {
     {
         if (controller.isPlayerOnSight)
         {
-			Debug.Log ("entro me esta viendo");
             controller.chaseTarget = controller.player;
         }
 
@@ -25,7 +24,7 @@ public class ConeDecision : Decision {
             controller.pState = StateController.pursuitState.PATROL;
             return false;
         }
-
+		//Debug.Log ("visto "+ controller.isPlayerOnSight + " " + "oido " + controller.isPlayerHeard);
         return controller.isPlayerOnSight || controller.isPlayerHeard;
     }
 

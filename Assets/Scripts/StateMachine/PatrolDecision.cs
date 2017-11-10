@@ -16,6 +16,7 @@ namespace AssemblyCSharp
 					controller.changePoint = true;
 				return true;
 			}
+
 			return false;
 		}
 	}
