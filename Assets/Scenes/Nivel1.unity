@@ -602,6 +602,13 @@ MonoBehaviour:
   turnSpeed: 3
   stoppingDst: 10
   finished: 0
+  Mass: 1
+  MaxStrengh: 0.1
+  MaxVelocity: 0.2
+  TickFixedTime: 0.01
+  Velocity: {x: 0, y: 0, z: 0}
+  SteerStrengh: {x: 0, y: 0, z: 0}
+  desiredVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &133512656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +637,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
+  Passes: 4
+  called: 0
   pathfining: {fileID: 0}
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
@@ -1839,6 +1852,13 @@ MonoBehaviour:
   turnSpeed: 3
   stoppingDst: 10
   finished: 0
+  Mass: 1
+  MaxStrengh: 0.1
+  MaxVelocity: 0.2
+  TickFixedTime: 0.01
+  Velocity: {x: 0, y: 0, z: 0}
+  SteerStrengh: {x: 0, y: 0, z: 0}
+  desiredVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &393598321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1867,6 +1887,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
+  Passes: 4
+  called: 0
   pathfining: {fileID: 0}
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
@@ -2231,14 +2257,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 598583466}
-  rotationX: 90
+  rotationX: 60
   rotationY: 0
   rotationZ: 0
-  cameraType: 1
-  CameraHeight: 30
+  cameraType: 2
+  CameraHeight: 15
   CameraSpeed: 10
   DstFromPlayer: 0
-  Offset: 10
+  Offset: 5
 --- !u!1 &422082887
 GameObject:
   m_ObjectHideFlags: 0
@@ -6949,6 +6975,13 @@ MonoBehaviour:
   turnSpeed: 3
   stoppingDst: 10
   finished: 0
+  Mass: 1
+  MaxStrengh: 0.1
+  MaxVelocity: 0.2
+  TickFixedTime: 0.01
+  Velocity: {x: 0, y: 0, z: 0}
+  SteerStrengh: {x: 0, y: 0, z: 0}
+  desiredVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &712133109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6977,6 +7010,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
+  Passes: 4
+  called: 0
   pathfining: {fileID: 0}
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
@@ -19547,6 +19586,13 @@ MonoBehaviour:
   turnSpeed: 3
   stoppingDst: 10
   finished: 0
+  Mass: 1
+  MaxStrengh: 0.1
+  MaxVelocity: 0.2
+  TickFixedTime: 0.01
+  Velocity: {x: 0, y: 0, z: 0}
+  SteerStrengh: {x: 0, y: 0, z: 0}
+  desiredVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &1105130705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19574,6 +19620,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
+  Passes: 4
+  called: 0
   pathfining: {fileID: 0}
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}
@@ -19870,6 +19922,13 @@ MonoBehaviour:
   turnSpeed: 3
   stoppingDst: 10
   finished: 0
+  Mass: 1
+  MaxStrengh: 0.1
+  MaxVelocity: 0.2
+  TickFixedTime: 0.01
+  Velocity: {x: 0, y: 0, z: 0}
+  SteerStrengh: {x: 0, y: 0, z: 0}
+  desiredVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &1194507218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19898,6 +19957,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa111fecfaba93947998bbbb40cbeeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  leftVector: {x: 0, y: 0, z: 0}
+  rightVector: {x: 0, y: 0, z: 0}
+  changePoint: 0
+  Passes: 4
+  called: 0
   pathfining: {fileID: 0}
   currentState: {fileID: 11400000, guid: 6f4f0591e5f91a040849891de165563c, type: 2}
   remainState: {fileID: 11400000, guid: 9494109fd832ff0478b143bf06b69d53, type: 2}

@@ -99,7 +99,7 @@ public class Unit : MonoBehaviour {
 					break;
 				}
 
-				if (pathIndex >= path.slowDownIndex && stoppingDst > 0) {
+				if (target.gameObject.tag == "Player" && pathIndex >= path.slowDownIndex && stoppingDst > 0) {
 					speedPercent = Mathf.Clamp01 (path.turnBoundaries [path.finishLineIndex].DistanceFromPoint (pos2D) / stoppingDst);
 					if (speedPercent < 0.01f) {
 						followingPath = false;
@@ -109,7 +109,10 @@ public class Unit : MonoBehaviour {
 			
 					Quaternion targetRotation = Quaternion.LookRotation (path.lookPoints [pathIndex] - transform.position);
 					transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
-				
+
+				if (target.tag == "Player") {
+					CalculateSteerStrenght ();
+				}
 				transform.Translate (Vector3.forward * Time.deltaTime * speed * speedPercent, Space.Self);
 			}
 
@@ -135,4 +138,29 @@ public class Unit : MonoBehaviour {
 			path.DrawWithGizmos (); 
 		}
 	}
+
+	//seek
+	public 	float	Mass			= 1f;
+	public	float	MaxStrengh		= 0.1f;
+	public	float	MaxVelocity		= 0.2f;
+	public	float	TickFixedTime 	= 0.01f;
+
+	public 	Vector3 Velocity;
+	public 	Vector3	SteerStrengh;
+	public Vector3 desiredVelocity;
+
+	public void CalculateSteerStrenght(){
+		desiredVelocity = (target.position - transform.position).normalized * MaxVelocity;
+		SteerStrengh = desiredVelocity - Velocity;
+
+		Velocity = maxVector (Velocity + SteerStrengh * (1.0f / Mass), MaxVelocity);
+		transform.position += Velocity;
+	}
+
+	private Vector3 maxVector(Vector3 v, float c){
+		if (v.magnitude > c)
+			return v.normalized * c;
+		return v;
+	}
+		
 }

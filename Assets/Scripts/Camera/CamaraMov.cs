@@ -34,7 +34,7 @@ public class CamaraMov : MonoBehaviour
 			break;
 		case CameraType.LookFromAbove:
 			movement = new LookFromAbove ();
-			position = new Vector3 (0f, CameraHeight, -gridSizey / 2f);
+			position = new Vector3 (0f, CameraHeight, -gridSizey / 2f - DstFromPlayer);
 			rotation = new Vector3 (rotationX, rotationY, rotationZ);
 			break;
 		case CameraType.LookCloser:
