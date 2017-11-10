@@ -226,7 +226,11 @@
     <Compile Include="Assets\HiveMindController.cs" />
     <Compile Include="Assets\LifeManager.cs" />
     <Compile Include="Assets\MisionSuperada.cs" />
-    <Compile Include="Assets\Scripts\CamaraMov.cs" />
+    <Compile Include="Assets\Scripts\Camera\CamaraMov.cs" />
+    <Compile Include="Assets\Scripts\Camera\ICameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Camera\LookAtPlayer.cs" />
+    <Compile Include="Assets\Scripts\Camera\LookCloser.cs" />
+    <Compile Include="Assets\Scripts\Camera\LookFromAbove.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyIdle.cs" />
@@ -243,7 +247,11 @@
     <Compile Include="Assets\Scripts\Pathfinding\Pathfinding.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\PathRequestManager.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Unit.cs" />
+    <Compile Include="Assets\Scripts\Player\IMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Movement.cs" />
+    <Compile Include="Assets\Scripts\Player\OneHandMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\TwoHandMovement.cs" />
     <Compile Include="Assets\Scripts\StateMachine\Action.cs" />
     <Compile Include="Assets\Scripts\StateMachine\ActiveStateDecision.cs" />
     <Compile Include="Assets\Scripts\StateMachine\ChaseAction.cs" />

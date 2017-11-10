@@ -33,10 +33,8 @@ public class Grid : MonoBehaviour {
 			walkableMask.value = walkableMask |= region.terrainMask.value;
 			walkableRegionsDictionary.Add ((int) Mathf.Log(region.terrainMask.value, 2), region.terrainPenalty * 2);
 		}
-		
 
-
-	}
+    }
 
 	void Start(){
         CreateGrid();

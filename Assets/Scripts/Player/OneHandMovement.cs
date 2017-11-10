@@ -20,7 +20,7 @@ public class OneHandMovement : MonoBehaviour, IMovement
 			z * player.speed_const * acceleration * Time.deltaTime);
 
 		if (z != 0 || x != 0) {
-			Debug.Log ("Changing rotation");
+			//Debug.Log ("Changing rotation");
 
 			float yRot = transform.rotation.y;
 

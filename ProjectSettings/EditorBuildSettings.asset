@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel1.unity
     guid: 7d0fe04c3ef47d04e927bf61cf854d93
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: d6e913743ea731b4d87bbfda899e3e94
+  - enabled: 1
+    path: Assets/Scenes/JerryHaMuerto.unity
+    guid: b9b1b40e553ab15469105e453f1fc8bb
